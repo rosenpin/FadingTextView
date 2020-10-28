@@ -82,6 +82,17 @@ public class FadingTextView extends android.support.v7.widget.AppCompatTextView 
 	}
 	
 	/**
+	 * Fades text to the indicated position in array
+	 * It's recommended to call pause() method before calling this function
+	 */
+	public void fadeTo(int position){
+		this.position = position;
+		isShown = true;
+		startAnimation();
+		pause();
+	}
+
+	/**
 	 * Restarts the animation
 	 * Only use this to restart the animation after stopping it using {@link #stop}
 	 */
